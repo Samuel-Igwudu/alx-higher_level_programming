@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" defines a class
+"""
+
+
 class Square:
     """ class square that defines a square.
     """
