@@ -5,7 +5,7 @@
 class Square:
     """ class square that defines a square.
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0) -> None:
         """ Method to initialize
         """
         if not isinstance(size, int):
