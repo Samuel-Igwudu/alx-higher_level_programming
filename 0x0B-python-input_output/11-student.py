@@ -35,4 +35,4 @@ class Student:
     def reload_from_json(self, json):
         """ method that replaces all attributes of the Student instance"""
         for atr in json:
-            self.__dir__[atr] = json[atr]
+            self.__dict__[atr] = json[atr]
