@@ -13,7 +13,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """ method to return directory description"""
         obj = self.__dict__.copy()
         if type(attrs) is list:
