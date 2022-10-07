@@ -41,7 +41,7 @@ class Base:
         with open(filename, 'w') as f:
             f.write(lists)
 
-    @staticmehod
+    @staticmethod
     def from_json_string(json_string):
         """ json string dictionary """
         if not json_string:
@@ -126,7 +126,7 @@ class Base:
 
         list_ins = []
 
-        for index in range(len(matrix):
+        for index in range(len(matrix)):
             list_ins.append(cls.create(**matrix[index]))
 
         return list_ins

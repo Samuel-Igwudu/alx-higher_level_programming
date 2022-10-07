@@ -3,7 +3,7 @@
 from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """ class Rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -52,7 +52,7 @@ class Rectangle:
         """ x setter """
         if type(value) is not int:
             raise TypeError("x must be an integer")
-        if x < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
@@ -66,7 +66,7 @@ class Rectangle:
         """ y setter """
         if type(value) is not int:
             raise TypeError("y must be an integer")
-        if y < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
@@ -94,7 +94,7 @@ class Rectangle:
 
     def update(self, *args, **kwargs):
         """ method update """
-        if args is not None and len(args) is not 0:
+        if args != None and len(args) != 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list_atr[i], args[i])
