@@ -83,6 +83,9 @@ class Base:
 
         if cls.__name__ == "Rectangle":
             list_dic = [0, 0, 0, 0, 0]
+            list_keys = ['id', 'width', 'height', 'x', 'y']
+        else:
+            list_dic = ['0', '0', '0', '0']
             list_keys = ['id', 'size', 'x', 'y']
 
         matrix = []
@@ -93,7 +96,7 @@ class Base:
             for obj in list_objs:
                 for kv in range(len(list_keys)):
                     list_dic[kv] = obj.to_dictionary()[list_keys[kv]]
-                matrix.append(list_dict[:])
+                matrix.append(list_dic[:])
 
         with open(filename, 'w') as writeFile:
             writer = csv.writer(writeFile)
