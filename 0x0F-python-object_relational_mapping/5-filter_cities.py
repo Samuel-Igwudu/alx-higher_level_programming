@@ -11,9 +11,8 @@ if __name__ == "__main__":
 
     pter = db.cursor()
     pter.execute("SELECT cities.id, cities.name, states.name \
-            FROM cities JOIN states ON cities.state_id = states.id
+            FROM cities JOIN states ON cities.state_id = states.id \
             WHERE states.name = '{};".format(sys.argv[4]))
     states = pter.fetchall()
 
-    for state in states:
-        print(state)
+    print(", ".join([state[1] for state in states]))
